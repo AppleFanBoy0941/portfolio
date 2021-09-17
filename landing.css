@@ -1,0 +1,82 @@
+.landing-page {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #ff00c7 0%, #51003f 100%),
+        linear-gradient(120deg, #0030ad 0%, #00071a 100%),
+        linear-gradient(180deg, #000346 0%, #ff0000 100%),
+        linear-gradient(60deg, #0029ff 0%, #aa0014 100%),
+        radial-gradient(100% 165% at 100% 100%, #ff00a8 0%, #00ff47 100%),
+        radial-gradient(100% 150% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: overlay, color-dodge, overlay, overlay, difference,
+        normal;
+    background-size: 300% 110%;
+    /* color: rgb(168, 155, 155); */
+    animation: gradient 12s infinite alternate ease 2s;
+    padding-top: 3%;
+    /* position: relative; */
+}
+
+.landing-centered {
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: center;
+    color: white;
+}
+
+.landing-centered img {
+    width: 250px;
+    height: auto;
+    margin-bottom: -40px;
+}
+
+.landing-centered h1 {
+    font-size: 96px;
+}
+
+.landing-centered h1 span {
+    color: #ff4c29;
+}
+
+.landing-centered h2 {
+    opacity: 0.4;
+    margin-top: 0.4em;
+    letter-spacing: 2px;
+    font-size: 28px;
+}
+
+.landing-cta {
+    display: inline-block;
+    padding: 24px 32px;
+    margin: 52px;
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    background: #ff4d29;
+    border-radius: 32px;
+    text-transform: uppercase;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.1);
+}
+
+.landing-cta:hover {
+    letter-spacing: 2px;
+    background: #ff4d29;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    color: white !important;
+    font-weight: 700;
+    box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.2), 0 8px 75px 0 rgba(0, 0, 0, 0.2);
+    /* -webkit-box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px 50px -1px rgba(0, 0, 0, 0.2); */
+}
+
+.landing-cta:hover .chevron-right {
+    margin-left: 2px;
+}

@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    background: whitesmoke;
+}
+
+h1,
+h1 span,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Baloo 2", sans-serif;
+    margin-bottom: -0.4em;
+}
+
+.hbi {
+    stroke-width: 2px;
+}
+
+.header {
+    background: linear-gradient(120deg, #ff00c7 0%, #51003f 100%),
+    linear-gradient(120deg, #0030ad 0%, #00071a 100%),
+    linear-gradient(180deg, #000346 0%, #ff0000 100%),
+    linear-gradient(60deg, #0029ff 0%, #aa0014 100%),
+    radial-gradient(100% 165% at 100% 100%, #ff00a8 0%, #00ff47 100%),
+    radial-gradient(100% 150% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: overlay, color-dodge, overlay, overlay, difference,
+    normal;
+    background-size: 200% 100%;
+    /* background-position: top; */
+    animation: gradient 12s infinite alternate ease 2s;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 8px 32px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+}
+
+.nav-list li {
+    display: block;
+    margin: 16px 24px;
+    min-width: 140px;
+    height: 100px;
+}
+
+.nav-list li a {
+    display: flex;
+    flex-direction: column;
+    color: rgba(150, 150, 150);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(5, 0, 10, .1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 50px rgba(0, 0, 0, .05);
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.nav-list li a:hover {
+    background: #ff4d29;
+    color: white;
+}
+
+.nav-list li a p {
+    opacity: 0;
+    padding-top: 8px;
+    height: 0;
+    animation: nav-menu-name-off .5s ease;
+    -webkit-animation: nav-menu-name-off .5s ease;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.nav-list li a:hover p {
+    animation: nav-menu-name-on .5s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: nav-menu-name-on .5s ease;
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+.nav-list li a:hover .hbi {
+    stroke-width: 3px;
+}
+
+#active {
+    background: #ff4c29;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, .15);
+    color: white;
+}
+
+.nav-list li img {
+    height: 120px;
+    width: auto;
+    margin: -20px 0;
+}
+
+/* ========== NAV ================ */
+
+
+
+/* ========== HOME PAGE ========== */
+
+/* .home-page-header {
+    height: 100vh;
+    background: linear-gradient(120deg, #ff00c7 0%, #51003f 100%),
+        linear-gradient(120deg, #0030ad 0%, #00071a 100%),
+        linear-gradient(180deg, #000346 0%, #ff0000 100%),
+        linear-gradient(60deg, #0029ff 0%, #aa0014 100%),
+        radial-gradient(100% 165% at 100% 100%, #ff00a8 0%, #00ff47 100%),
+        radial-gradient(100% 150% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: overlay, color-dodge, overlay, overlay, difference,
+        normal;
+    background-size: 200% 200%;
+    animation: gradient-home 15s infinite alternate ease-in-out 2s;
+    position: relative;
+}
+
+.home-header-title {
+    color: white;
+    font-size: 6vw;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 0 4px 40px rgba(5, 0, 10, .15);
+    transition: letter-spacing .5s ease-in-out;
+}
+
+.home-header-title:hover {
+    letter-spacing: 4px;
+}
+
+.home-header-title span {
+    color: #ff4d29;
+}
+
+@media screen and (min-width: 900px) {
+    .home-page-header {
+        height: 65vh;
+    }
+
+    .home-header-title {
+        font-size: 64px;
+    }
+} */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes gradient-home {
+    0% {
+        background-position: 0% 00%;
+    }
+    100% {
+        background-position: 100% 00%;
+    }
+}
+
+@keyframes nav-menu-name-on {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: 19px;
+    }
+}
+
+@keyframes nav-menu-name-off {
+    from {
+        opacity: 1;
+        height: 19px;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@-webkit-keyframes nav-menu-name-on {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: 19px;
+    }
+}
+
+@-webkit-keyframes nav-menu-name-off {
+    from {
+        opacity: 1;
+        height: 19px;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}

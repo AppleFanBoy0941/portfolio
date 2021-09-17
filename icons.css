@@ -1,0 +1,16 @@
+.chevron-right {
+    margin-bottom: -6px;
+    transition: margin-left .2s ease-in-out;
+}
+
+.i-home {
+    margin-left: -1px;
+}
+
+.i-grid {
+    margin-right: -1px;
+}
+
+.i-at-sign {
+    margin-left: -2px;
+}
